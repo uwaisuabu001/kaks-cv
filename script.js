@@ -24,7 +24,7 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.1 });
 
-document.querySelectorAll("section:not(.hero)").forEach((s) => {
+document.querySelectorAll(".row .content").forEach((s) => {
   s.classList.add("reveal");
   observer.observe(s);
 });

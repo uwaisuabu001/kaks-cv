@@ -7,110 +7,109 @@
   <meta name="description" content="Portfolio of Your Name: developer, designer and builder.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;800;900&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="nav">
-    <a href="#top" class="logo">YN<span>.</span></a>
-    <nav>
+  <header class="bar">
+    <a href="#top" class="mono">YOUR NAME ©<span id="year"></span></a>
+    <nav class="mono">
       <a href="#about">About</a>
-      <a href="#projects">Projects</a>
+      <a href="#work">Work</a>
       <a href="#skills">Skills</a>
       <a href="#contact">Contact</a>
     </nav>
-    <button id="theme-toggle" aria-label="Toggle dark mode">◐</button>
+    <button id="theme-toggle" class="mono" aria-label="Toggle dark mode">[ ◐ ]</button>
   </header>
 
   <main id="top">
     <!-- HERO -->
     <section class="hero">
-      <p class="eyebrow">Hi, I'm</p>
-      <h1>Your Name</h1>
-      <h2>I build things for the web.</h2>
-      <p class="lead">
-        A short sentence about who you are and what you love doing.
-        Replace this with your own intro.
-      </p>
-      <div class="cta">
-        <a href="#projects" class="btn primary">See my work</a>
-        <a href="#contact" class="btn">Get in touch</a>
+      <div class="hero-meta mono">
+        <span>Portfolio / 2026</span>
+        <span class="status"><i></i>Available for work</span>
+      </div>
+      <h1>Your<br>Name<span class="dot">.</span></h1>
+      <div class="hero-foot">
+        <p class="lead">Developer &amp; designer. I build simple, fast, honest things for the web.</p>
+        <a href="#work" class="btn">See work ↓</a>
       </div>
     </section>
 
     <!-- ABOUT -->
-    <section id="about">
-      <h3 class="section-title">About me</h3>
-      <div class="about">
-        <div>
-          <p>
-            Write 2–3 short paragraphs about yourself: your background, what you're
-            studying or working on, and what kind of work you're looking for.
-          </p>
-          <p>
-            Outside of coding, mention a hobby or two. It makes you memorable.
-          </p>
-        </div>
-        <div class="avatar" aria-hidden="true">YN</div>
+    <section id="about" class="row">
+      <h2 class="label mono">01 / About</h2>
+      <div class="content">
+        <p class="big">
+          Write one strong sentence about who you are and what you care about.
+        </p>
+        <p>
+          Then 2–3 short lines on your background, what you're studying or working
+          on, and the kind of work you're looking for. Keep it plain and direct.
+        </p>
       </div>
     </section>
 
-    <!-- PROJECTS -->
-    <section id="projects">
-      <h3 class="section-title">Projects</h3>
-      <div class="grid">
-        <article class="card">
-          <h4>Project One</h4>
-          <p>What it does, the problem it solves, and what you learned building it.</p>
-          <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
-          <div class="links">
-            <a href="https://github.com/" target="_blank" rel="noopener">Code ↗</a>
-            <a href="#" target="_blank" rel="noopener">Live ↗</a>
-          </div>
-        </article>
-        <article class="card">
-          <h4>Project Two</h4>
-          <p>What it does, the problem it solves, and what you learned building it.</p>
-          <ul class="tags"><li>Python</li><li>Flask</li></ul>
-          <div class="links">
-            <a href="https://github.com/" target="_blank" rel="noopener">Code ↗</a>
-          </div>
-        </article>
-        <article class="card">
-          <h4>Project Three</h4>
-          <p>What it does, the problem it solves, and what you learned building it.</p>
-          <ul class="tags"><li>React</li><li>API</li></ul>
-          <div class="links">
-            <a href="https://github.com/" target="_blank" rel="noopener">Code ↗</a>
-            <a href="#" target="_blank" rel="noopener">Live ↗</a>
-          </div>
-        </article>
-      </div>
+    <!-- WORK -->
+    <section id="work" class="row">
+      <h2 class="label mono">02 / Work</h2>
+      <ol class="projects content">
+        <li>
+          <a href="https://github.com/" target="_blank" rel="noopener">
+            <span class="num mono">001</span>
+            <span class="title">Project One</span>
+            <span class="desc">What it does and the problem it solves.</span>
+            <span class="stack mono">HTML · CSS · JS</span>
+            <span class="arrow">↗</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/" target="_blank" rel="noopener">
+            <span class="num mono">002</span>
+            <span class="title">Project Two</span>
+            <span class="desc">What it does and the problem it solves.</span>
+            <span class="stack mono">Python · Flask</span>
+            <span class="arrow">↗</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/" target="_blank" rel="noopener">
+            <span class="num mono">003</span>
+            <span class="title">Project Three</span>
+            <span class="desc">What it does and the problem it solves.</span>
+            <span class="stack mono">React · API</span>
+            <span class="arrow">↗</span>
+          </a>
+        </li>
+      </ol>
     </section>
 
     <!-- SKILLS -->
-    <section id="skills">
-      <h3 class="section-title">Skills</h3>
-      <ul class="skills">
-        <li>HTML</li><li>CSS</li><li>JavaScript</li><li>Git &amp; GitHub</li>
+    <section id="skills" class="row">
+      <h2 class="label mono">03 / Skills</h2>
+      <ul class="skills content mono">
+        <li>HTML</li><li>CSS</li><li>JavaScript</li><li>Git</li>
         <li>Python</li><li>React</li><li>SQL</li><li>Figma</li>
       </ul>
     </section>
 
     <!-- CONTACT -->
-    <section id="contact" class="contact">
-      <h3 class="section-title">Let's talk</h3>
-      <p>I'm open to new opportunities. My inbox is always open.</p>
-      <a class="btn primary" href="mailto:you@example.com">Say hello</a>
-      <div class="socials">
-        <a href="https://github.com/your-username" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://linkedin.com/in/your-profile" target="_blank" rel="noopener">LinkedIn</a>
+    <section id="contact" class="row contact">
+      <h2 class="label mono">04 / Contact</h2>
+      <div class="content">
+        <a class="email" href="mailto:you@example.com">you@example.com</a>
+        <div class="socials mono">
+          <a href="https://github.com/uwaisuabu001" target="_blank" rel="noopener">GitHub ↗</a>
+          <a href="https://linkedin.com/in/your-profile" target="_blank" rel="noopener">LinkedIn ↗</a>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer>
-    <p>© <span id="year"></span> Your Name · Built from scratch, hosted on GitHub Pages</p>
+  <footer class="bar mono">
+    <span>Built from scratch</span>
+    <span>Hosted on GitHub Pages</span>
+    <a href="#top">Top ↑</a>
   </footer>
 
   <script src="script.js"></script>
