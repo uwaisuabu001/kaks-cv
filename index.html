@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Your Name — Portfolio</title>
+  <meta name="description" content="Portfolio of Your Name: developer, designer and builder.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="nav">
+    <a href="#top" class="logo">YN<span>.</span></a>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button id="theme-toggle" aria-label="Toggle dark mode">◐</button>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <p class="eyebrow">Hi, I'm</p>
+      <h1>Your Name</h1>
+      <h2>I build things for the web.</h2>
+      <p class="lead">
+        A short sentence about who you are and what you love doing.
+        Replace this with your own intro.
+      </p>
+      <div class="cta">
+        <a href="#projects" class="btn primary">See my work</a>
+        <a href="#contact" class="btn">Get in touch</a>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <h3 class="section-title">About me</h3>
+      <div class="about">
+        <div>
+          <p>
+            Write 2–3 short paragraphs about yourself: your background, what you're
+            studying or working on, and what kind of work you're looking for.
+          </p>
+          <p>
+            Outside of coding, mention a hobby or two. It makes you memorable.
+          </p>
+        </div>
+        <div class="avatar" aria-hidden="true">YN</div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <h3 class="section-title">Projects</h3>
+      <div class="grid">
+        <article class="card">
+          <h4>Project One</h4>
+          <p>What it does, the problem it solves, and what you learned building it.</p>
+          <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+          <div class="links">
+            <a href="https://github.com/" target="_blank" rel="noopener">Code ↗</a>
+            <a href="#" target="_blank" rel="noopener">Live ↗</a>
+          </div>
+        </article>
+        <article class="card">
+          <h4>Project Two</h4>
+          <p>What it does, the problem it solves, and what you learned building it.</p>
+          <ul class="tags"><li>Python</li><li>Flask</li></ul>
+          <div class="links">
+            <a href="https://github.com/" target="_blank" rel="noopener">Code ↗</a>
+          </div>
+        </article>
+        <article class="card">
+          <h4>Project Three</h4>
+          <p>What it does, the problem it solves, and what you learned building it.</p>
+          <ul class="tags"><li>React</li><li>API</li></ul>
+          <div class="links">
+            <a href="https://github.com/" target="_blank" rel="noopener">Code ↗</a>
+            <a href="#" target="_blank" rel="noopener">Live ↗</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <h3 class="section-title">Skills</h3>
+      <ul class="skills">
+        <li>HTML</li><li>CSS</li><li>JavaScript</li><li>Git &amp; GitHub</li>
+        <li>Python</li><li>React</li><li>SQL</li><li>Figma</li>
+      </ul>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact">
+      <h3 class="section-title">Let's talk</h3>
+      <p>I'm open to new opportunities. My inbox is always open.</p>
+      <a class="btn primary" href="mailto:you@example.com">Say hello</a>
+      <div class="socials">
+        <a href="https://github.com/your-username" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://linkedin.com/in/your-profile" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> Your Name · Built from scratch, hosted on GitHub Pages</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
