@@ -7,22 +7,28 @@
 :root {
   --ink: #1a1c2c;          /* ballpoint, almost black-blue */
   --pen: #23308f;          /* blue biro for links */
-  --paper: #d6d7cb;        /* grey-green paper from the reference */
-  --paper-light: #e2e3d8;
-  --cover-bg: #f2f1ec;
+  --paper: #d8dacb;        /* grey-green paper from the reference */
+  --paper-light: #e8e9de;
+  --cover-bg: #f6f5ef;
   --gum: #f19ab4;
   --gum-dark: #d26c8d;
   --mint: #9fdcc8;
   --mint-dark: #5fb39a;
-  /* paper grain, drawn with an SVG noise filter */
-  --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 .09 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  /* real paper: a seamless fibre/grain photo-style texture, tinted by multiply */
+  --texture: url("img/paper.jpg");
+  --tex-size: 640px;
+  /* uneven light across a sheet, and slightly aged edges */
+  --light: radial-gradient(120% 90% at 30% 20%, rgba(255,255,250,.35), rgba(255,255,255,0) 60%),
+           radial-gradient(140% 120% at 80% 100%, rgba(120,110,80,.10), rgba(0,0,0,0) 60%);
+  --edges: inset 0 0 0 1px rgba(255,255,255,.35), inset 0 0 28px rgba(110,100,70,.16);
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 html, body { height: 100%; }
 body {
-  background: var(--cover-bg);
+  background: var(--texture) 0 0 / var(--tex-size) repeat, var(--cover-bg);
+  background-blend-mode: multiply, normal;
   color: var(--ink);
   font-family: "Caveat", "Comic Sans MS", cursive;
   overflow-x: hidden;
@@ -56,8 +62,9 @@ button { font: inherit; color: inherit; }
   margin-top: -2vh;
   border: 0;
   cursor: pointer;
-  background: var(--grain), linear-gradient(170deg, var(--paper-light), var(--paper));
-  box-shadow: 0 1px 1px rgba(0,0,0,.25), 0 14px 30px -8px rgba(0,0,0,.55);
+  background: var(--light), var(--texture) 0 0 / var(--tex-size) repeat, var(--paper);
+  background-blend-mode: normal, multiply, normal;
+  box-shadow: var(--edges), 0 1px 1px rgba(0,0,0,.25), 0 14px 30px -8px rgba(0,0,0,.55);
   transform: rotate(-1.2deg);
   transition: transform .25s ease, box-shadow .25s ease;
   display: flex; flex-direction: column; align-items: center; justify-content: center;
@@ -65,7 +72,7 @@ button { font: inherit; color: inherit; }
 }
 .note:hover, .note:focus-visible {
   transform: rotate(0.6deg) translateY(-6px) scale(1.02);
-  box-shadow: 0 1px 1px rgba(0,0,0,.25), 0 24px 40px -10px rgba(0,0,0,.6);
+  box-shadow: var(--edges), 0 1px 1px rgba(0,0,0,.25), 0 24px 40px -10px rgba(0,0,0,.6);
   outline: none;
 }
 .clip {
@@ -105,8 +112,9 @@ button { font: inherit; color: inherit; }
 .flyer {
   position: fixed; z-index: 30;
   display: none;
-  background: var(--grain), linear-gradient(170deg, var(--paper-light), var(--paper));
-  box-shadow: 0 20px 60px -10px rgba(0,0,0,.6);
+  background: var(--light), var(--texture) 0 0 / var(--tex-size) repeat, var(--paper);
+  background-blend-mode: normal, multiply, normal;
+  box-shadow: var(--edges), 0 20px 60px -10px rgba(0,0,0,.6);
   transition: left .6s cubic-bezier(.7,0,.2,1), top .6s cubic-bezier(.7,0,.2,1),
               width .6s cubic-bezier(.7,0,.2,1), height .6s cubic-bezier(.7,0,.2,1),
               transform .6s cubic-bezier(.7,0,.2,1), opacity .25s ease;
@@ -125,8 +133,9 @@ button { font: inherit; color: inherit; }
 .sheet {
   position: relative;
   max-width: 820px; margin: 0 auto;
-  background: var(--grain), linear-gradient(175deg, var(--paper-light), var(--paper) 40%);
-  box-shadow: 0 20px 60px -10px rgba(0,0,0,.6);
+  background: var(--light), var(--texture) 0 0 / var(--tex-size) repeat, var(--paper);
+  background-blend-mode: normal, multiply, normal;
+  box-shadow: var(--edges), 0 20px 60px -10px rgba(0,0,0,.6);
   padding: clamp(28px, 6vw, 72px) clamp(20px, 7vw, 84px) clamp(40px, 7vw, 80px);
   font-size: clamp(1.35rem, 2.4vw, 1.6rem);
   line-height: 1.35;
@@ -275,3 +284,36 @@ h3 { font-size: 1.15em; font-weight: 700; margin-bottom: 6px; display: flex; ali
   *, *::before, *::after { animation: none !important; transition: none !important; }
   .ink { clip-path: none; }
 }
+
+/* ================= REAL PAPER DETAILS ================= */
+/* fold creases: the sheet was folded in thirds, then in half */
+.sheet::before {
+  content: ""; position: absolute; inset: 0; z-index: 3; pointer-events: none;
+  background:
+    linear-gradient(to bottom,
+      transparent calc(33.3% - 18px), rgba(60,55,40,.05) calc(33.3% - 2px),
+      rgba(60,55,40,.16) 33.3%, rgba(255,255,250,.55) calc(33.3% + 1px),
+      rgba(255,255,250,.12) calc(33.3% + 8px), transparent calc(33.3% + 20px)),
+    linear-gradient(to bottom,
+      transparent calc(66.6% - 18px), rgba(255,255,250,.12) calc(66.6% - 8px),
+      rgba(255,255,250,.5) calc(66.6% - 1px), rgba(60,55,40,.15) 66.6%,
+      rgba(60,55,40,.05) calc(66.6% + 2px), transparent calc(66.6% + 18px)),
+    linear-gradient(to right,
+      transparent calc(50% - 14px), rgba(60,55,40,.035) calc(50% - 2px),
+      rgba(60,55,40,.10) 50%, rgba(255,255,250,.4) calc(50% + 1px), transparent calc(50% + 12px));
+}
+/* the note: one soft crease and a corner that has been bent */
+.note::before {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background:
+    linear-gradient(to bottom, transparent calc(58% - 10px), rgba(60,55,40,.08) calc(58% - 1px),
+      rgba(255,255,250,.45) calc(58% + 1px), transparent calc(58% + 10px)),
+    linear-gradient(135deg, transparent 88%, rgba(60,55,40,.10) 88.4%, rgba(255,255,250,.35) 89%, transparent 92%);
+}
+
+/* ink soaks into the paper: slightly see-through with a tiny bleed */
+.sheet, .note { color: rgba(20, 23, 44, .9); }
+.sheet .ink, .note-name, .note-title {
+  text-shadow: 0 0 .7px rgba(20, 23, 44, .55);
+}
+.sheet a { color: rgba(30, 42, 140, .92); }
