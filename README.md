@@ -1,16 +1,17 @@
-# My Portfolio
+# Kaks — Portfolio
 
-A personal portfolio built from scratch with plain HTML, CSS and JavaScript, hosted free on GitHub Pages.
+Halftone cover with a clipped note. Tap the note and it zooms into a full sheet of paper,
+written in pen, with photos stuck on using chewing gum.
+
+Plain HTML, CSS and JavaScript, hosted on GitHub Pages. No build step.
 
 ## Files
-- `index.html`: page content (edit your name, bio, projects here)
-- `style.css`: colors, fonts, layout (change `--accent` to restyle)
-- `script.js`: dark-mode toggle and scroll animations
+- `index.html`: all the text (name, about, projects, skills, contact)
+- `style.css`: the look (paper colour, gum, fonts)
+- `script.js`: the zoom-in and the pen-writing animation
+- `img/`: the halftone portrait and the pasted photo
 
-## Run locally
-Open `index.html` in your browser. That's it.
-
-## Deploy to GitHub Pages
-1. Create a repo named `<your-username>.github.io` on GitHub.
-2. Push these files to the `main` branch.
-3. Visit `https://<your-username>.github.io` (it takes about a minute the first time).
+## Add a project screenshot
+Put the picture in `img/`, then in `index.html` replace
+`<div class="placeholder">stick a screenshot here</div>` with
+`<img src="img/your-picture.jpg" alt="Project name">`.

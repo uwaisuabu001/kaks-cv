@@ -3,114 +3,130 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Your Name — Portfolio</title>
-  <meta name="description" content="Portfolio of Your Name: developer, designer and builder.">
+  <title>Kaks — Portfolio</title>
+  <meta name="description" content="Kaks — portfolio.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;800;900&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Rock+Salt&family=Special+Elite&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="bar">
-    <a href="#top" class="mono">YOUR NAME ©<span id="year"></span></a>
-    <nav class="mono">
-      <a href="#about">About</a>
-      <a href="#work">Work</a>
-      <a href="#skills">Skills</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <button id="theme-toggle" class="mono" aria-label="Toggle dark mode">[ ◐ ]</button>
-  </header>
 
-  <main id="top">
-    <!-- HERO -->
-    <section class="hero">
-      <div class="hero-meta mono">
-        <span>Portfolio / 2026</span>
-        <span class="status"><i></i>Available for work</span>
-      </div>
-      <h1>Your<br>Name<span class="dot">.</span></h1>
-      <div class="hero-foot">
-        <p class="lead">Developer &amp; designer. I build simple, fast, honest things for the web.</p>
-        <a href="#work" class="btn">See work ↓</a>
-      </div>
-    </section>
+  <!-- ================= COVER ================= -->
+  <main class="cover" id="cover">
+    <img class="portrait" src="img/portrait-halftone.png" alt="Halftone portrait of Kaks">
 
-    <!-- ABOUT -->
-    <section id="about" class="row">
-      <h2 class="label mono">01 / About</h2>
-      <div class="content">
-        <p class="big">
-          Write one strong sentence about who you are and what you care about.
-        </p>
-        <p>
-          Then 2–3 short lines on your background, what you're studying or working
-          on, and the kind of work you're looking for. Keep it plain and direct.
-        </p>
-      </div>
-    </section>
+    <button class="note" id="note" aria-label="Open portfolio" aria-controls="sheet-wrap" aria-expanded="false">
+      <svg class="clip" viewBox="0 0 40 46" aria-hidden="true">
+        <path d="M6 18h28l-3 26H9z" fill="#111"/>
+        <path d="M12 18V8a8 8 0 0 1 16 0v10" fill="none" stroke="#111" stroke-width="3.5"/>
+        <path d="M16 18V9a4 4 0 0 1 8 0v9" fill="none" stroke="#111" stroke-width="2.5"/>
+        <rect x="6" y="18" width="28" height="3" fill="#333"/>
+      </svg>
+      <span class="note-name">KAKS</span>
+      <span class="note-title">Portfolio</span>
+    </button>
 
-    <!-- WORK -->
-    <section id="work" class="row">
-      <h2 class="label mono">02 / Work</h2>
-      <ol class="projects content">
-        <li>
-          <a href="https://github.com/" target="_blank" rel="noopener">
-            <span class="num mono">001</span>
-            <span class="title">Project One</span>
-            <span class="desc">What it does and the problem it solves.</span>
-            <span class="stack mono">HTML · CSS · JS</span>
-            <span class="arrow">↗</span>
-          </a>
-        </li>
-        <li>
-          <a href="https://github.com/" target="_blank" rel="noopener">
-            <span class="num mono">002</span>
-            <span class="title">Project Two</span>
-            <span class="desc">What it does and the problem it solves.</span>
-            <span class="stack mono">Python · Flask</span>
-            <span class="arrow">↗</span>
-          </a>
-        </li>
-        <li>
-          <a href="https://github.com/" target="_blank" rel="noopener">
-            <span class="num mono">003</span>
-            <span class="title">Project Three</span>
-            <span class="desc">What it does and the problem it solves.</span>
-            <span class="stack mono">React · API</span>
-            <span class="arrow">↗</span>
-          </a>
-        </li>
-      </ol>
-    </section>
-
-    <!-- SKILLS -->
-    <section id="skills" class="row">
-      <h2 class="label mono">03 / Skills</h2>
-      <ul class="skills content mono">
-        <li>HTML</li><li>CSS</li><li>JavaScript</li><li>Git</li>
-        <li>Python</li><li>React</li><li>SQL</li><li>Figma</li>
-      </ul>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="row contact">
-      <h2 class="label mono">04 / Contact</h2>
-      <div class="content">
-        <a class="email" href="mailto:you@example.com">you@example.com</a>
-        <div class="socials mono">
-          <a href="https://github.com/uwaisuabu001" target="_blank" rel="noopener">GitHub ↗</a>
-          <a href="https://linkedin.com/in/your-profile" target="_blank" rel="noopener">LinkedIn ↗</a>
-        </div>
-      </div>
-    </section>
+    <p class="hint">tap the note</p>
   </main>
 
-  <footer class="bar mono">
-    <span>Built from scratch</span>
-    <span>Hosted on GitHub Pages</span>
-    <a href="#top">Top ↑</a>
-  </footer>
+  <!-- ================= FULL SHEET ================= -->
+  <div class="flyer" id="flyer" aria-hidden="true"></div>
+
+  <div class="sheet-wrap" id="sheet-wrap" hidden>
+    <article class="sheet" id="sheet" aria-label="Portfolio">
+      <button class="close ink" id="close" aria-label="Close portfolio">close ✕</button>
+
+      <!-- header -->
+      <header class="sheet-head">
+        <p class="type ink">KAKS</p>
+        <h1 class="marker ink">Portfolio</h1>
+        <p class="date ink">22 / 11 / 2026</p>
+      </header>
+
+      <!-- about -->
+      <section class="about">
+        <figure class="pasted tilt-r">
+          <img src="img/portrait-photo.jpg" alt="Kaks">
+          <span class="gum g1"></span>
+          <span class="gum g2 mint"></span>
+        </figure>
+        <div>
+          <h2 class="ink">about me <span class="scribble"></span></h2>
+          <p class="ink">
+            Hi, I'm Kaks. Write two or three lines here about who you are, what you
+            study or do, and what kind of work you want next.
+          </p>
+          <p class="ink">
+            Something about you outside of work goes here too.
+          </p>
+        </div>
+      </section>
+
+      <!-- projects -->
+      <section class="projects">
+        <h2 class="ink">projects <span class="scribble"></span></h2>
+
+        <article class="project">
+          <figure class="pasted shot tilt-l">
+            <div class="placeholder">stick a screenshot here</div>
+            <span class="gum g1"></span>
+            <span class="gum g3"></span>
+          </figure>
+          <div>
+            <h3 class="ink"><span class="circle">1</span> Project One</h3>
+            <p class="ink">What it does, the problem it solves, and what you learned building it.</p>
+            <p class="tools ink">used: HTML, CSS, JavaScript</p>
+            <p class="ink"><a href="https://github.com/uwaisuabu001" target="_blank" rel="noopener">→ see the code</a></p>
+          </div>
+        </article>
+
+        <article class="project flip">
+          <figure class="pasted shot tilt-r">
+            <div class="placeholder">stick a screenshot here</div>
+            <span class="gum g2"></span>
+          </figure>
+          <div>
+            <h3 class="ink"><span class="circle">2</span> Project Two</h3>
+            <p class="ink">What it does, the problem it solves, and what you learned building it.</p>
+            <p class="tools ink">used: Python, Flask</p>
+            <p class="ink"><a href="https://github.com/uwaisuabu001" target="_blank" rel="noopener">→ see the code</a></p>
+          </div>
+        </article>
+
+        <article class="project">
+          <figure class="pasted shot tilt-l2">
+            <div class="placeholder">stick a screenshot here</div>
+            <span class="gum g1 mint"></span>
+            <span class="gum g4"></span>
+          </figure>
+          <div>
+            <h3 class="ink"><span class="circle">3</span> Project Three</h3>
+            <p class="ink">What it does, the problem it solves, and what you learned building it.</p>
+            <p class="tools ink">used: React, an API</p>
+            <p class="ink"><a href="https://github.com/uwaisuabu001" target="_blank" rel="noopener">→ see the code</a></p>
+          </div>
+        </article>
+      </section>
+
+      <!-- skills -->
+      <section class="skills">
+        <h2 class="ink">things i can do <span class="scribble"></span></h2>
+        <ul class="ink">
+          <li>HTML</li><li>CSS</li><li>JavaScript</li><li>Git</li>
+          <li>Python</li><li>React</li><li>SQL</li><li>Figma</li>
+        </ul>
+      </section>
+
+      <!-- contact -->
+      <section class="contact">
+        <h2 class="ink">find me <span class="scribble"></span></h2>
+        <p class="ink"><a href="mailto:you@example.com">you@example.com</a></p>
+        <p class="ink"><a href="https://github.com/uwaisuabu001" target="_blank" rel="noopener">github.com/uwaisuabu001</a></p>
+        <p class="sign marker ink">— Kaks</p>
+      </section>
+    </article>
+  </div>
 
   <script src="script.js"></script>
 </body>
