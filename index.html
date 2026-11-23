@@ -3,20 +3,19 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Kaks — Portfolio</title>
-  <meta name="description" content="Kaks — portfolio.">
+  <title>Kaks — Curriculum Vitae</title>
+  <meta name="description" content="Kaks — curriculum vitae and selected work.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Rock+Salt&family=Special+Elite&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Instrument+Serif:ital@0;1&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Rock+Salt&family=Special+Elite&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- ================= COVER ================= -->
-  <main class="cover" id="cover">
+  <!-- ================= FRONT COVER ================= -->
+  <header class="cover" id="cover">
     <img class="portrait" src="img/portrait-halftone.png" alt="Halftone portrait of Kaks">
-
-    <button class="note" id="note" aria-label="Open portfolio" aria-controls="sheet-wrap" aria-expanded="false">
+    <a class="note" id="note" href="#cv" aria-label="Open the CV">
       <svg class="clip" viewBox="0 0 40 46" aria-hidden="true">
         <path d="M6 18h28l-3 26H9z" fill="#111"/>
         <path d="M12 18V8a8 8 0 0 1 16 0v10" fill="none" stroke="#111" stroke-width="3.5"/>
@@ -25,108 +24,250 @@
       </svg>
       <span class="note-name">KAKS</span>
       <span class="note-title">Portfolio</span>
-    </button>
-
+    </a>
     <p class="hint">tap the note</p>
-  </main>
+  </header>
 
-  <!-- ================= FULL SHEET ================= -->
-  <div class="flyer" id="flyer" aria-hidden="true"></div>
+  <!-- ================= THE CV ================= -->
+  <main class="paper" id="cv">
 
-  <div class="sheet-wrap" id="sheet-wrap" hidden>
-    <article class="sheet" id="sheet" aria-label="Portfolio">
-      <button class="close ink" id="close" aria-label="Close portfolio">close ✕</button>
+    <!-- masthead -->
+    <div class="wrap">
+      <div class="dateline mono">
+        <span>Curriculum Vitae</span>
+        <span>Issue Nº 01</span>
+        <span>November 2026</span>
+        <button class="print mono" id="print" type="button">Print / save PDF ↓</button>
+      </div>
+      <h1 class="masthead">Kaks</h1>
+      <div class="dateline mono under">
+        <span>Developer &amp; Designer</span>
+        <span>Based in — Your City</span>
+        <span>Available for work</span>
+      </div>
+    </div>
 
-      <!-- header -->
-      <header class="sheet-head">
-        <p class="type ink">KAKS</p>
-        <h1 class="marker ink">Portfolio</h1>
-        <p class="date ink">22 / 11 / 2026</p>
+    <!-- contents -->
+    <nav class="wrap contents" aria-label="Contents">
+      <p class="kicker mono">In this issue</p>
+      <ol>
+        <li><a href="#profile"><span class="n">01</span><span class="t">The Profile</span><i>who, what &amp; why</i></a></li>
+        <li><a href="#experience"><span class="n">02</span><span class="t">Experience</span><i>the working years</i></a></li>
+        <li><a href="#work"><span class="n">03</span><span class="t">Selected Work</span><i>three features</i></a></li>
+        <li><a href="#education"><span class="n">04</span><span class="t">Education</span><i>where it started</i></a></li>
+        <li><a href="#skills"><span class="n">05</span><span class="t">Skills</span><i>the toolbox</i></a></li>
+        <li><a href="#contact"><span class="n">06</span><span class="t">Correspondence</span><i>write in</i></a></li>
+      </ol>
+    </nav>
+
+    <!-- 01 PROFILE -->
+    <section class="wrap section" id="profile">
+      <header class="sec-head">
+        <span class="n mono">01</span>
+        <h2>The Profile</h2>
+        <span class="mono">pp. 02–03</span>
       </header>
 
-      <!-- about -->
-      <section class="about">
+      <div class="profile">
         <figure class="pasted tilt-r">
-          <img src="img/portrait-photo.jpg" alt="Kaks">
+          <img src="img/portrait-photo.jpg" alt="Portrait of Kaks">
           <span class="gum g1"></span>
           <span class="gum g2 mint"></span>
+          <figcaption class="mono">Fig. 1 — The author, photocopied.</figcaption>
+          <p class="margin-note">↑ this is me ✎</p>
         </figure>
-        <div>
-          <h2 class="ink">about me <span class="scribble"></span></h2>
-          <p class="ink">
-            Hi, I'm Kaks. Write two or three lines here about who you are, what you
-            study or do, and what kind of work you want next.
-          </p>
-          <p class="ink">
-            Something about you outside of work goes here too.
-          </p>
+
+        <div class="lede">
+          <p class="standfirst">A one-sentence headline about you: what you do, and the kind of work you want to be known for.</p>
+          <div class="columns">
+            <p class="dropcap">Write your story here in two or three short paragraphs. Start with where you are now: what you study or do day to day, and what drew you to it in the first place.</p>
+            <p>Then say what you are good at, the kind of problems you enjoy, and the sort of team you work well in. Keep sentences short; editors cut everything else.</p>
+            <p>End with what you are looking for next: a role, an internship, freelance work, a collaboration.</p>
+          </div>
+          <blockquote class="pull">“A short line you believe about your work goes here.”</blockquote>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- projects -->
-      <section class="projects">
-        <h2 class="ink">projects <span class="scribble"></span></h2>
+    <!-- 02 EXPERIENCE -->
+    <section class="wrap section" id="experience">
+      <header class="sec-head">
+        <span class="n mono">02</span>
+        <h2>Experience</h2>
+        <span class="mono">pp. 04–05</span>
+      </header>
 
-        <article class="project">
-          <figure class="pasted shot tilt-l">
-            <div class="placeholder">stick a screenshot here</div>
-            <span class="gum g1"></span>
-            <span class="gum g3"></span>
-          </figure>
+      <ol class="entries">
+        <li class="entry">
+          <p class="when mono">2025 — Now</p>
           <div>
-            <h3 class="ink"><span class="circle">1</span> Project One</h3>
-            <p class="ink">What it does, the problem it solves, and what you learned building it.</p>
-            <p class="tools ink">used: HTML, CSS, JavaScript</p>
-            <p class="ink"><a href="https://github.com/uwaisuabu001" target="_blank" rel="noopener">→ see the code</a></p>
+            <h3>Job Title <em>at Company Name</em></h3>
+            <p>One or two lines about what you did and what changed because of it. Use numbers where you can.</p>
           </div>
-        </article>
-
-        <article class="project flip">
-          <figure class="pasted shot tilt-r">
-            <div class="placeholder">stick a screenshot here</div>
-            <span class="gum g2"></span>
-          </figure>
+          <p class="where mono">City · Full-time</p>
+        </li>
+        <li class="entry">
+          <p class="when mono">2024 — 2025</p>
           <div>
-            <h3 class="ink"><span class="circle">2</span> Project Two</h3>
-            <p class="ink">What it does, the problem it solves, and what you learned building it.</p>
-            <p class="tools ink">used: Python, Flask</p>
-            <p class="ink"><a href="https://github.com/uwaisuabu001" target="_blank" rel="noopener">→ see the code</a></p>
+            <h3>Job Title <em>at Company Name</em></h3>
+            <p>One or two lines about what you did and what changed because of it.</p>
           </div>
-        </article>
-
-        <article class="project">
-          <figure class="pasted shot tilt-l2">
-            <div class="placeholder">stick a screenshot here</div>
-            <span class="gum g1 mint"></span>
-            <span class="gum g4"></span>
-          </figure>
+          <p class="where mono">Remote · Freelance</p>
+        </li>
+        <li class="entry">
+          <p class="when mono">2023</p>
           <div>
-            <h3 class="ink"><span class="circle">3</span> Project Three</h3>
-            <p class="ink">What it does, the problem it solves, and what you learned building it.</p>
-            <p class="tools ink">used: React, an API</p>
-            <p class="ink"><a href="https://github.com/uwaisuabu001" target="_blank" rel="noopener">→ see the code</a></p>
+            <h3>Internship <em>at Company Name</em></h3>
+            <p>One or two lines about what you did and what you learned.</p>
           </div>
-        </article>
-      </section>
+          <p class="where mono">City · 3 months</p>
+        </li>
+      </ol>
+    </section>
 
-      <!-- skills -->
-      <section class="skills">
-        <h2 class="ink">things i can do <span class="scribble"></span></h2>
-        <ul class="ink">
-          <li>HTML</li><li>CSS</li><li>JavaScript</li><li>Git</li>
-          <li>Python</li><li>React</li><li>SQL</li><li>Figma</li>
-        </ul>
-      </section>
+    <!-- 03 SELECTED WORK -->
+    <section class="wrap section" id="work">
+      <header class="sec-head">
+        <span class="n mono">03</span>
+        <h2>Selected Work</h2>
+        <span class="mono">pp. 06–11</span>
+      </header>
 
-      <!-- contact -->
-      <section class="contact">
-        <h2 class="ink">find me <span class="scribble"></span></h2>
-        <p class="ink"><a href="mailto:you@example.com">you@example.com</a></p>
-        <p class="ink"><a href="https://github.com/uwaisuabu001" target="_blank" rel="noopener">github.com/uwaisuabu001</a></p>
-        <p class="sign marker ink">— Kaks</p>
-      </section>
-    </article>
-  </div>
+      <article class="feature">
+        <figure class="pasted shot tilt-l">
+          <div class="placeholder">stick a screenshot here</div>
+          <span class="gum g1"></span><span class="gum g3"></span>
+          <figcaption class="mono">Fig. 2 — Project One, home screen.</figcaption>
+        </figure>
+        <div class="feature-text">
+          <p class="big-n">i.</p>
+          <h3>Project One</h3>
+          <p class="standfirst">The problem it solves, in one sentence.</p>
+          <p>How you built it, the hardest part, and what you would do differently. Two or three lines is plenty.</p>
+          <p class="meta mono">HTML · CSS · JavaScript</p>
+          <p class="links mono"><a href="https://github.com/uwaisuabu001" target="_blank" rel="noopener">Read the code ↗</a></p>
+        </div>
+      </article>
+
+      <article class="feature flip">
+        <figure class="pasted shot tilt-r">
+          <div class="placeholder">stick a screenshot here</div>
+          <span class="gum g2"></span>
+          <figcaption class="mono">Fig. 3 — Project Two, dashboard.</figcaption>
+        </figure>
+        <div class="feature-text">
+          <p class="big-n">ii.</p>
+          <h3>Project Two</h3>
+          <p class="standfirst">The problem it solves, in one sentence.</p>
+          <p>How you built it, the hardest part, and what you would do differently.</p>
+          <p class="meta mono">Python · Flask</p>
+          <p class="links mono"><a href="https://github.com/uwaisuabu001" target="_blank" rel="noopener">Read the code ↗</a></p>
+        </div>
+      </article>
+
+      <article class="feature">
+        <figure class="pasted shot tilt-l2">
+          <div class="placeholder">stick a screenshot here</div>
+          <span class="gum g1 mint"></span><span class="gum g4"></span>
+          <figcaption class="mono">Fig. 4 — Project Three, in use.</figcaption>
+        </figure>
+        <div class="feature-text">
+          <p class="big-n">iii.</p>
+          <h3>Project Three</h3>
+          <p class="standfirst">The problem it solves, in one sentence.</p>
+          <p>How you built it, the hardest part, and what you would do differently.</p>
+          <p class="meta mono">React · API</p>
+          <p class="links mono"><a href="https://github.com/uwaisuabu001" target="_blank" rel="noopener">Read the code ↗</a></p>
+        </div>
+      </article>
+    </section>
+
+    <!-- 04 EDUCATION -->
+    <section class="wrap section" id="education">
+      <header class="sec-head">
+        <span class="n mono">04</span>
+        <h2>Education</h2>
+        <span class="mono">p. 12</span>
+      </header>
+      <ol class="entries">
+        <li class="entry">
+          <p class="when mono">2022 — 2026</p>
+          <div>
+            <h3>Degree or Course <em>School or University</em></h3>
+            <p>Focus, grade, thesis or anything you are proud of.</p>
+          </div>
+          <p class="where mono">City</p>
+        </li>
+        <li class="entry">
+          <p class="when mono">2019 — 2022</p>
+          <div>
+            <h3>High School <em>School Name</em></h3>
+            <p>Subjects, awards, clubs.</p>
+          </div>
+          <p class="where mono">City</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- 05 SKILLS -->
+    <section class="wrap section" id="skills">
+      <header class="sec-head">
+        <span class="n mono">05</span>
+        <h2>Skills</h2>
+        <span class="mono">p. 13</span>
+      </header>
+      <div class="skills">
+        <div>
+          <h4 class="mono">Code</h4>
+          <ul class="leaders">
+            <li><span>HTML &amp; CSS</span><b>Advanced</b></li>
+            <li><span>JavaScript</span><b>Advanced</b></li>
+            <li><span>React</span><b>Good</b></li>
+            <li><span>Python</span><b>Good</b></li>
+            <li><span>SQL</span><b>Basic</b></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="mono">Design &amp; tools</h4>
+          <ul class="leaders">
+            <li><span>Figma</span><b>Good</b></li>
+            <li><span>Git &amp; GitHub</span><b>Good</b></li>
+            <li><span>Typography</span><b>Good</b></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="mono">Languages</h4>
+          <ul class="leaders">
+            <li><span>English</span><b>Fluent</b></li>
+            <li><span>Language Two</span><b>Native</b></li>
+          </ul>
+          <p class="margin-note small">still learning more ✎</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06 CONTACT -->
+    <section class="wrap section" id="contact">
+      <header class="sec-head">
+        <span class="n mono">06</span>
+        <h2>Correspondence</h2>
+        <span class="mono">p. 14</span>
+      </header>
+      <p class="kicker mono">Letters, offers &amp; hellos to</p>
+      <a class="email" href="mailto:you@example.com">you@example.com</a>
+      <ul class="elsewhere mono">
+        <li><a href="https://github.com/uwaisuabu001" target="_blank" rel="noopener">GitHub ↗</a></li>
+        <li><a href="https://linkedin.com/in/your-profile" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+      </ul>
+      <p class="sign">— Kaks</p>
+    </section>
+
+    <footer class="wrap colophon mono">
+      <span>Colophon — set in Instrument Serif, Newsreader &amp; Special Elite.</span>
+      <span>Printed on paper, published on GitHub Pages.</span>
+      <a href="#cover">Back to cover ↑</a>
+    </footer>
+  </main>
 
   <script src="script.js"></script>
 </body>

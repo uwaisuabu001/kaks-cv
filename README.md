@@ -1,15 +1,17 @@
-# Kaks — Portfolio
+# Kaks — Curriculum Vitae
 
-Halftone cover with a clipped note. Tap the note and it zooms into a full sheet of paper,
-written in pen, with photos stuck on using chewing gum.
+An editorial, magazine-style CV. A halftone front cover with a clipped note,
+then the CV laid out like a printed magazine on real paper: masthead, contents,
+numbered sections, pull quotes, pen notes in the margins and photos stuck on with chewing gum.
 
 Plain HTML, CSS and JavaScript, hosted on GitHub Pages. No build step.
+The "Print / save PDF" button gives a clean black-and-white CV.
 
 ## Files
-- `index.html`: all the text (name, about, projects, skills, contact)
-- `style.css`: the look (paper colour, gum, fonts)
-- `script.js`: the zoom-in and the pen-writing animation
-- `img/`: the halftone portrait and the pasted photo
+- `index.html`: all the text (profile, experience, work, education, skills, contact)
+- `style.css`: the look (paper, typography, gum, print layout)
+- `script.js`: print button and scroll fade-ins
+- `img/`: halftone portrait, pasted photo and the paper texture
 
 ## Add a project screenshot
 Put the picture in `img/`, then in `index.html` replace
